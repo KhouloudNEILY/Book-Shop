@@ -29,7 +29,7 @@ const addBook  = (callback, body) => {
 
 }
 const removeBook = (callback, body) => {
-  connection.query('DELETE FROM book WHERE id = ?', [body.id], callback)
+  connection.query('DELETE FROM book WHERE title = ?', [body.title], callback)
 
 }
 const upDateBook=(callback,body,params)=>{

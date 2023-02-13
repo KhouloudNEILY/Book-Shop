@@ -3,12 +3,15 @@ import ListBook from "./ListBook.jsx";
 
 
 
+
 const List = (props) => (
   <div>
-    <h4>List Component</h4>
-   {props.book.map((e,i)=>{
-   return <ListBook ee={e} remove={props.remove}/>
-   })}
+   
+    {props.book.map((book, index) => (
+      <div key={index}>
+        <ListBook book={book}  remove={props.remove} updateBook={props.updateBook} />
+      </div>
+    ))}
   </div>
 );
 
